@@ -7,12 +7,9 @@ from asteroidfield import AsteroidField
 
 def main():
     pygame.init()
-    
     screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
-
-    dt = 0
     game_clock = pygame.time.Clock()
-
+    
     updatable = pygame.sprite.Group()
     drawable = pygame.sprite.Group()
     asteroids = pygame.sprite.Group()
@@ -23,6 +20,8 @@ def main():
 
     player = Player(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2)
     asteroidfield = AsteroidField()
+
+    dt = 0
     
     while True:
         for event in pygame.event.get():
